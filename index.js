@@ -11,9 +11,7 @@ const {
 } = require("./src/queries");
 
 async function main() {
-  console.log("╔══════════════════════════════════════════════════════════════╗");
-  console.log("║   Лабораторна робота — MongoDB / Система вивчення мов        ║");
-  console.log("╚══════════════════════════════════════════════════════════════╝");
+  console.log("Лабораторна робота — MongoDB / Система вивчення мов");
 
   await connect();
   await seed();
@@ -26,11 +24,11 @@ async function main() {
   await demoSearch();
   await demoAggregation();
 
-  console.log("\n\n✅  Всі демонстрації завершено успішно!\n");
+  console.log("\n\n End of demonstrations\n");
   await disconnect();
 }
 
 main().catch((err) => {
-  console.error("❌ Помилка:", err);
+  console.error("Error:", err);
   process.exit(1);
 });
