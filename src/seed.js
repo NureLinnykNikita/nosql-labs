@@ -1,4 +1,4 @@
-const { getDb } = require("./src/db");
+const { getDb } = require("./db");
 
 // ─── Фіксовані string-ID для зв'язків між колекціями 
 const ids = {

@@ -1,5 +1,5 @@
 const { connect, disconnect } = require("./src/db");
-const { seed } = require("./seed");
+const { seed } = require("./src/seed");
 const {
   demoCreate,
   demoRead,
