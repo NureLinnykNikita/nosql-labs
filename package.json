@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev:server": "nodemon server.js",
+    "dev:client": "npx serve client -p 5500 --no-clipboard",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "seed": "node index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -13,6 +16,8 @@
     "mongodb": "^6.3.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2",
+    "serve": "^14.2.1"
   }
 }
